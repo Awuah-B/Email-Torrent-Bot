@@ -31,7 +31,7 @@ if not os.path.exists(TORRENT_APP_PATH):
 def read_email():
     """Check the email inbox for instructions."""
     try:
-        with IMAPClient("imap.gmail.com",  ssl=False) as client:
+        with IMAPClient("imap.gmail.com",  ssl=True) as client:
             client.login(EMAIL, APP_PASSWORD)
             client.select_folder("INBOX")
 
